@@ -1,14 +1,12 @@
-[![Cargo Check](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/check.yml/badge.svg)](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/check.yml)
-[![Cargo Format](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/format.yml/badge.svg)](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/format.yml)
+[![Check](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/check.yml/badge.svg)](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/check.yml)
+[![Format](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/format.yml/badge.svg)](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/format.yml)
 [![Lint](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/lint.yml/badge.svg)](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/lint.yml)
-[![Cargo Audit](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/audit.yml/badge.svg)](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/audit.yml)
-[![crates.io](https://img.shields.io/crates/v/basic-axum-rate-limit.svg)](https://crates.io/crates/basic-axum-rate-limit)
-
-# axum-tower-sessions-csrf
-
+[![Audit](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/audit.yml/badge.svg)](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/audit.yml)
 [![Crates.io](https://img.shields.io/crates/v/axum-tower-sessions-csrf.svg)](https://crates.io/crates/axum-tower-sessions-csrf)
 [![Documentation](https://docs.rs/axum-tower-sessions-csrf/badge.svg)](https://docs.rs/axum-tower-sessions-csrf)
 [![License](https://img.shields.io/crates/l/axum-tower-sessions-csrf.svg)](https://github.com/yourusername/axum-tower-sessions-csrf#license)
+
+# axum-tower-sessions-csrf
 
 CSRF protection for Axum using tower-sessions, implementing the **Synchronizer Token Pattern** as recommended by [OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html).
 
