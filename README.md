@@ -1,3 +1,9 @@
+[![Cargo Check](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/check.yml/badge.svg)](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/check.yml)
+[![Cargo Format](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/format.yml/badge.svg)](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/format.yml)
+[![Lint](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/lint.yml/badge.svg)](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/lint.yml)
+[![Cargo Audit](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/audit.yml/badge.svg)](https://github.com/cavebatsofware/axum-tower-sessions-csrf/actions/workflows/audit.yml)
+[![crates.io](https://img.shields.io/crates/v/basic-axum-rate-limit.svg)](https://crates.io/crates/basic-axum-rate-limit)
+
 # axum-tower-sessions-csrf
 
 [![Crates.io](https://img.shields.io/crates/v/axum-tower-sessions-csrf.svg)](https://crates.io/crates/axum-tower-sessions-csrf)

@@ -1,0 +1,23 @@
+name: ⛅ Lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  release:
+    types: [created]
+
+jobs:
+  all:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: hecrj/setup-rust-action@110f36749599534ca96628b82f52ae67e5d95a3c
+        with:
+          components: clippy
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd
+      - name: Check lints
+        run: cargo clippy --all-features --all-targets --no-deps -- -D warnings
