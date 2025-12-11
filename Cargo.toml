@@ -1,0 +1,26 @@
+[package]
+name = "axum-tower-sessions-csrf"
+version = "0.1.0"
+edition = "2021"
+authors = ["Grant DeFayette"]
+license = "MIT OR LGPL-3.0-or-later"
+description = "CSRF protection for Axum using tower-sessions with the Synchronizer Token Pattern"
+repository = "https://github.com/cavebatsofware/axum-tower-sessions-csrf"
+keywords = ["axum", "csrf", "tower-sessions", "security", "middleware"]
+categories = ["web-programming", "authentication"]
+readme = "README.md"
+
+[dependencies]
+axum = { version = "0.8.7", default-features = false }
+tower-sessions = "0.14.0"
+rand = "0.9.2"
+hex = "0.4.3"
+tracing = { version = "0.1.43", optional = true }
+
+[features]
+default = ["tracing"]
+tracing = ["dep:tracing"]
+
+[dev-dependencies]
+tokio = { version = "1.48", features = ["macros", "rt"] }
+tower-sessions-memory-store = "0.14.0"
