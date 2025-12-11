@@ -8,12 +8,12 @@ CSRF protection for Axum using tower-sessions, implementing the **Synchronizer T
 
 ## Features
 
-- 🔒 **Cryptographically secure** token generation
-- 📦 **Session-based** token storage (no cookies needed)
-- ⚡ **Constant-time** token validation (prevents timing attacks)
-- 🎯 **Automatic** validation on POST/PUT/DELETE/PATCH requests
-- 🔧 **Simple** integration with existing Axum applications
-- 🪶 **Lightweight** with minimal dependencies
+- **Cryptographically secure** token generation
+- **Session-based** token storage (no cookies needed)
+- **Constant-time** token validation (prevents timing attacks)
+- **Automatic** validation on POST/PUT/DELETE/PATCH requests
+- **Simple** integration with existing Axum applications
+- **Lightweight** with minimal dependencies
 
 ## Installation
 
@@ -90,16 +90,16 @@ await fetch('/api/submit', {
 
 ## Security Considerations
 
-- ✅ Tokens are stored server-side (not in cookies)
-- ✅ Constant-time comparison prevents timing attacks
-- ✅ Cryptographically secure random token generation
-- ✅ Follows OWASP best practices
+- Tokens are stored server-side (not in cookies)
+- Constant-time comparison prevents timing attacks
+- Cryptographically secure random token generation
+- Follows OWASP best practices https://devguide.owasp.org/
 
 ## License
 
 Licensed under either of:
 
-- GNU Lesser General Public License v3.0 or later ([LICENSE-LGPL3](LICENSE-LGPL3) or https://www.gnu.org/licenses/lgpl-3.0.html)
+- GNU Lesser General Public License v3.0 or later ([LICENSE-LGPL3](LICENSE-LGPL3.md) or https://www.gnu.org/licenses/lgpl-3.0.html)
 - MIT license ([LICENSE-MIT](LICENSE-MIT) or https://opensource.org/licenses/MIT)
 
 at your option.
