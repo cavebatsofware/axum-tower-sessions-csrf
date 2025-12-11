@@ -50,7 +50,7 @@
 //!
 //! ## Usage
 //!
-//! 1. Add the middleware to your router (must be after SessionManagerLayer)
+//! 1. Add the middleware to your router (must be after `SessionManagerLayer`)
 //! 2. Clients fetch CSRF token via [`get_or_create_token`]
 //! 3. Include token in `x-csrf-token` header for state-changing requests
 //!

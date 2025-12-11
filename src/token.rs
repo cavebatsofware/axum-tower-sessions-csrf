@@ -30,6 +30,7 @@ use tower_sessions::Session;
 /// let token = generate_token();
 /// assert_eq!(token.len(), 64);
 /// ```
+#[must_use]
 pub fn generate_token() -> String {
     let token_bytes: [u8; 32] = rand::rng().random();
     hex::encode(token_bytes)
@@ -114,7 +115,10 @@ mod tests {
     #[test]
     fn test_multiple_tokens_are_unique() {
         let tokens: Vec<String> = (0..100).map(|_| generate_token()).collect();
-        let unique_count = tokens.iter().collect::<std::collections::HashSet<_>>().len();
+        let unique_count = tokens
+            .iter()
+            .collect::<std::collections::HashSet<_>>()
+            .len();
         assert_eq!(unique_count, 100, "All generated tokens should be unique");
     }
 }
