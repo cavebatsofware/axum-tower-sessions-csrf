@@ -19,12 +19,12 @@
 //!
 //! ## Features
 //!
-//! - 🔒 Cryptographically secure token generation
-//! - 📦 Session-based token storage (no cookies needed)
-//! - ⚡ Constant-time token validation (prevents timing attacks)
-//! - 🎯 Automatic validation on POST/PUT/DELETE/PATCH requests
-//! - 🔧 Simple integration with existing Axum applications
-//! - 🪶 Lightweight with minimal dependencies
+//! - Cryptographically secure token generation
+//! - Session-based token storage (no cookies needed)
+//! - Constant-time token validation (prevents timing attacks)
+//! - Automatic validation on POST/PUT/DELETE/PATCH requests
+//! - Simple integration with existing Axum applications
+//! - Lightweight with minimal dependencies
 //!
 //! ## Quick Start
 //!
@@ -34,12 +34,12 @@
 //! use tower_sessions::{MemoryStore, SessionManagerLayer};
 //! use axum_tower_sessions_csrf::CsrfMiddleware;
 //!
-//! #[tokio::main]
+//! #[tokio::main(flavor = "current_thread")]
 //! async fn main() {
 //!     let session_store = MemoryStore::default();
 //!     let session_layer = SessionManagerLayer::new(session_store);
 //!
-//!     let app = Router::new()
+//!     let app: Router = Router::new()
 //!         .route("/", get(|| async { "Hello!" }))
 //!         .layer(from_fn(CsrfMiddleware::middleware))
 //!         .layer(session_layer);

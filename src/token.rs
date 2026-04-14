@@ -14,7 +14,7 @@
 //! CSRF token generation and session management
 
 use crate::TOKEN_KEY;
-use rand::Rng;
+use rand::RngExt;
 use tower_sessions::Session;
 
 /// Generate a cryptographically secure CSRF token
@@ -52,8 +52,7 @@ pub fn generate_token() -> String {
 ///
 /// # Examples
 ///
-/// ```ignore
-/// use axum::extract::Extension;
+/// ```no_run
 /// use tower_sessions::Session;
 /// use axum_tower_sessions_csrf::get_or_create_token;
 ///
