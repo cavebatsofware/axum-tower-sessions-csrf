@@ -49,12 +49,13 @@ impl CsrfMiddleware {
     ///
     /// # Examples
     ///
-    /// ```ignore
-    /// use axum::Router;
-    /// use axum::middleware::from_fn;
+    /// ```no_run
+    /// use axum::{Router, middleware::from_fn, routing::post};
     /// use axum_tower_sessions_csrf::CsrfMiddleware;
     ///
-    /// let app = Router::new()
+    /// async fn update_data() -> &'static str { "ok" }
+    ///
+    /// let app: Router = Router::new()
     ///     .route("/api/data", post(update_data))
     ///     .layer(from_fn(CsrfMiddleware::middleware));
     /// ```
@@ -151,5 +152,25 @@ mod tests {
         assert!(!CsrfMiddleware::constant_time_eq(b"test", b"test1"));
         assert!(!CsrfMiddleware::constant_time_eq(b"test1", b"test"));
         assert!(!CsrfMiddleware::constant_time_eq(b"", b"x"));
+    }
+
+    #[test]
+    fn test_validate_token_valid() {
+        let mut headers = HeaderMap::new();
+        headers.insert(TOKEN_HEADER, "abc123".parse().unwrap());
+        assert!(CsrfMiddleware::validate_token(&headers, "abc123"));
+    }
+
+    #[test]
+    fn test_validate_token_missing_header() {
+        let headers = HeaderMap::new();
+        assert!(!CsrfMiddleware::validate_token(&headers, "abc123"));
+    }
+
+    #[test]
+    fn test_validate_token_wrong_token() {
+        let mut headers = HeaderMap::new();
+        headers.insert(TOKEN_HEADER, "wrong_token".parse().unwrap());
+        assert!(!CsrfMiddleware::validate_token(&headers, "correct_token"));
     }
 }

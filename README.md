@@ -23,8 +23,8 @@ CSRF protection for Axum using tower-sessions, implementing the **Synchronizer T
 
 ```toml
 [dependencies]
-axum-tower-sessions-csrf = "0.1"
-tower-sessions = "0.14"
+axum-tower-sessions-csrf = "0.1.3"
+tower-sessions = "0.15"
 ```
 
 ## Quick Start
